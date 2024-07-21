@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import logo1 from "../assets/logo1.png"; // Ensure this path is correct
-import { menu, close } from "../assets"; // Import menu and close icons if needed
+import { logo, menu, close } from "../assets";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -14,10 +13,15 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      setScrolled(scrollTop > 100);
+      if (scrollTop > 100) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -27,7 +31,7 @@ const Navbar = () => {
         styles.paddingX
       } w-full flex items-center py-5 fixed top-0 z-20 ${
         scrolled ? "bg-primary" : "bg-transparent"
-      } transition-colors duration-300`}
+      }`}
     >
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
         <Link
@@ -37,20 +41,14 @@ const Navbar = () => {
             setActive("");
             window.scrollTo(0, 0);
           }}
-          aria-label='Go to homepage'
         >
-          <img 
-            src={logo1} 
-            alt='SwiftNook Logo' 
-            className='w-12 h-12 rounded-full object-cover' 
-          />
+          <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
           <p className='text-white text-[18px] font-bold cursor-pointer flex '>
-            SwiftNook &nbsp;
-            <span className='sm:block hidden'> | iOS & MERN Stack Developer</span>
+            Adrian &nbsp;
+            <span className='sm:block hidden'> | JavaScript Mastery</span>
           </p>
         </Link>
 
-        {/* Desktop Menu */}
         <ul className='list-none hidden sm:flex flex-row gap-10'>
           {navLinks.map((nav) => (
             <li
@@ -65,17 +63,14 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Mobile Menu Toggle */}
         <div className='sm:hidden flex flex-1 justify-end items-center'>
           <img
             src={toggle ? close : menu}
-            alt='menu toggle'
-            className='w-[28px] h-[28px] object-contain cursor-pointer'
+            alt='menu'
+            className='w-[28px] h-[28px] object-contain'
             onClick={() => setToggle(!toggle)}
-            aria-label='Toggle menu'
           />
 
-          {/* Mobile Menu */}
           <div
             className={`${
               !toggle ? "hidden" : "flex"
