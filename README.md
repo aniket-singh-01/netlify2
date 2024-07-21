@@ -14,26 +14,3 @@ My 3D Developer Portfolio
     Explore my portfolio to see my work with React.js, Three.js, and Tailwind CSS.
   </div>
 </div>
-📋 Quick Start
-
-Prerequisites
-Git
-Node.js
-npm
-Clone the Repository
-bash
-Copy code
-git clone git@github.com:adrianhajdin/project_3D_developer_portfolio.git
-cd project_3D_developer_portfolio
-Install Dependencies
-bash
-Copy code
-npm install
-Set Up Environment Variables
-Create a .env file with your EmailJS credentials.
-
-Run the Project
-bash
-Copy code
-npm run dev
-Open http://localhost:5173 in your browser.
