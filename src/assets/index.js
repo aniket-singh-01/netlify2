@@ -1,5 +1,4 @@
 import logo from "./logo.svg";
-import logo1 from "./logo1.png";
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
@@ -18,9 +17,6 @@ import mongodb from "./tech/mongodb.png";
 import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
-import apple from "./tech/apple.png";
-import apple1 from "./tech/apple1.png";
-import swift from "./tech/swift.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
@@ -28,7 +24,6 @@ import threejs from "./tech/threejs.svg";
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
-import codefeast from "./company/codefeast.png";
 import tesla from "./company/tesla.png";
 
 import carrent from "./carrent.png";
@@ -36,7 +31,6 @@ import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
 export {
-  logo1,
   logo,
   backend,
   creator,
@@ -55,16 +49,12 @@ export {
   nodejs,
   reactjs,
   redux,
-  apple,
-  apple1,
-  swift,
   tailwind,
   typescript,
   threejs,
   meta,
   shopify,
   starbucks,
-  codefeast,
   tesla,
   carrent,
   jobit,
