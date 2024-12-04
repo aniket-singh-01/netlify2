@@ -39,7 +39,7 @@ const Contact = () => {
           from_name: form.name,
           to_name: "SwiftNook",
           from_email: form.email,
-          to_email: to_email,
+          to_email: form.email,
           message: form.message,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
